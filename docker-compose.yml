@@ -3,7 +3,7 @@ version: "2.3"
 services:
   evcxr:
     build:
-      context: ./docker
+      context: .
       dockerfile: Dockerfile
     image: evcxr
     user: 1000:1000
