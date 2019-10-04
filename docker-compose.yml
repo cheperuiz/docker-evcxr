@@ -1,0 +1,15 @@
+version: "2.3"
+
+services:
+  evcxr:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: evcxr
+    user: 1000:1000
+    working_dir: /scripts
+    command: ./start_jupyter.sh
+    volumes:
+      - ./notebooks:/notebooks
+    ports:
+      - 8888:8888
